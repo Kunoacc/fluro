@@ -132,7 +132,7 @@ class Router {
             settings: routeSettings,
             fullscreenDialog: transition == TransitionType.cupertinoFullScreenDialog,
             builder: (BuildContext context) {
-              return handler.handlerFunc(context, parameters);
+              return handler.handlerFunc(context, parameters, routeSettings.arguments);
             });
       } else if (isNativeTransition) {
         return new MaterialPageRoute<dynamic>(
